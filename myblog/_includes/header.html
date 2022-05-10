@@ -1,0 +1,179 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <!-- This script automatically retrieves whether there are custom pages in the site by looking at MD files, and dynamically loads page URLs and titles. -->
+
+    {%- assign default_paths = site.pages | map: "path" -%} <!-- all pages detected -->
+    {%- if default_paths -%}
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+
+        <div class="trigger">
+          <h1 class="title">AIT580- Final Project</h1>
+          <h2 class="sub">Analysis of Tornado impact on injuries and deaths </h2> 
+          <h3> <b> Introduction</b></h3> 
+          <style >h3{text-align:left;}</style>
+          <body>
+           <h3> <p style="line-height:1.4"> For this project, NOAA Storm database is chosen for the analysis.This database keeps track of the information which includes different characteristics of storms, natural calamities and their occurrences in the United States along with the approximations of the crop damage, property damage, injuries and deaths.
+              In this project, the deaths and injuries caused by Tornados are analyzed and different machine learning techniques are used for analyzing the injuries happened across different months.
+              The Storm data for the year 2020 is chosen for analysis. The data is obtained from the below link
+               https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/  </p></h3>
+          </body>
+          <style >h3{text-align:left;}</style>   
+               <br>
+               <h3><b> <p style="line-height:1.4"> Who can benefit from your data analysis (i.e., who are stakeholders)? Specify detailed 2 justifications on why your analysis will be beneficial to groups of people, researchers, or organizations.</p></h3></b>
+               <h3> <p style="line-height:1.4">From this project, the primary and secondary stakeholders are benefitted through this analysis since it is necessary to understand the impact of tornado and the damage it has caused in terms of injuries and fatalities in order to take preventive measures in the future and reduce the damage. At the same time it is also equally important for the general public to understand the incidents occurred in the past and be aware of the future </p></h3>
+               <br>
+               <h3><b><p style="line-height:1:4"></p> Nature of the Data Curation  </b> </h3></p>
+               <br>
+              <h3><b><p style="line-height:1.4"> Who (company, agency, organization) collected the data? • Who they are, what do they do</h3></b></p>
+              <h3><p style="line-height:1.4">Storm Data is an official publication of the National Oceanic and Atmospheric Administration (NOAA) which documents the occurrence of storms and other significant weather phenomena having sufficient intensity to cause loss of life, injuries, significant property damage, and/or disruption to commerce. In addition, it is a partial record of other significant meteorological events, such as record maximum or minimum temperatures or precipitation that occurs in connection with another event.</h3></p>
+              <br>
+              <h3><b><p style="line-height:1.4">Why did they collect the data (purpose)?</b></h3></p>
+              <h3><p style="line-height:1.4">The purpose for collecting this data is to analyze the how various disasters can affect an economy and also providing awareness to the public regarding the safety measures that need to be taken during a particular disaster.<br> </h3></p>
+              <h3><b><p style="line-height:1.4"> What is the nature of the data given the purpose of the data collection (e.g., any bias)?</h3></b></p>
+                <h3><p style="line-height:1.4">Usually, many datasets are NOT collected for data scientists themselves, but as a byproduct of organizational process. Because of this reason, it is important to understand the nature of the data.</h3></p>
+              <h3><p style="line-height:1.4">The information that is appearing on the Storm data is provided by or gathered from different sources such as surveys, media, other government agencies which are outside the National Weather Service (NWS). Sometimes because of the various constraints, the data is unverified by NWS but the organization does not guarantee the accuracy and validity of the data .</h3></b></p> 
+              <h3><b><p style="line-height:1.4"> Given the nature of the data, how can you adjust and leverage the data (i.e., what are pros and cons of the data and how can you overcome it)?</b> </h3></p>
+              <h3><p style="line-height:1.4">The data consists of different data types such as ratio, nominal, ordinal, date and longitudinal and latitude data.<br></h3>
+<h3><b>Pros:</b> </h3> 
+<h3>•	The data consists of sufficient number of rows for the analysis and also consists of missing values.<br></h3>
+<h3>•	Another advantage of the data is that it is given for the specific year so that a particular year can be chosen which makes the analysis easier and more understandable.<br></h3>
+<h3><b>Cons:</b></h3> 
+<h3>•	The main disadvantage in the dataset is that there are a lot of missing values which makes it difficult for analysis, and they are replaced with zero.<br></h3>
+<h3>•	Also, there are columns with no values which are removed as a part of exploratory data analysis<br></h3>
+<h3><b><p style="line-height:1.4"> Is there any privacy, quality, or other issues with this data?</b> </h3></p>
+<h3><p style="line-height:1.4">There are no privacy issues with the data since it is an open source and the organization makes a serious effort to ensure that the quality of the meets all the necessary standards. The data  further needs to be processed to fit for the analysis and visualizations.<br></h3></p>
+<h3><b> 3.Questions</b> <br></h3>
+<h3><b> What are the main questions of your interests that can be answered through the data that you chose?</b><br></h3>
+<h3>1) Which event type has the most occurrences?<br></h3>
+<h3>2) Which month has recorded the most injuries?<br></h3>
+<h3>3) Which month has recorded the most deaths?<br></h3>
+<h3>4) What is the number of tornadoes in every state?<br></h3>
+<h3>5) What is the impact of a tornado i.e. on deaths and injuries on different scales?<br></h3>
+<h3>6) What is the number of injuries for different tornado scales occurring for different months.<br></h3>
+<br>
+<h3><b><p style="line-height:1.4"> Provide justifications on why your question(s) are important for stakeholders</b></h3></p>
+<h3><p style="line-height:1.4">The above questions are important to address because it is necessary to understand the fatalities and injuries caused by the tornado in different states and the magnitude of the tornado at different months for that safety measures can be taken accordingly.<br></h3></p>
+<br>
+<style >h3{text-align:left;}</style>
+<h3><b><p style="line-height:1.4">(4) Requirements and Resources needed</b></h3></p>
+<h3><b><p style="line-height:1.4"> What software and hardware resources you have used in this project?</b> <br></h3></p>
+<h3><p style="line-height:1.4">The softwares that have been used are R, Python, JupyterNotebook,and Tableau.<br></h3></p>
+<h3><b><p style="line-height:1.4"> What kinds of pre-processes were needed to make use of the data, and why?</b><br></h3></p>
+<h3><p style="line-height:1.4">The data contains many unnecessary columns that were deleted and the missing values are replaced with zero<br></h3></p>
+<h3><b> <p style="line-height:1.4"> What are the advantages and limitations of the target dataset in answering your questions?</b> <br></h3></p>
+<h3><p style="line-height:1.4">Advantages:</h3></p>
+<h3><p style="line-height:1.4">Strom data for a specific year can be easily downloaded from the website<br></h3></p>
+<h3><p style="line-height:1.4">Disadvantages:</h3></p>
+<h3>•	The dates are not in a specific format<br> </h3>
+<h3>•	Many empty columns<br></h3> 
+<h3>•	A lot of missing values<br></h3>
+<style >h3{text-align:left;}</style>
+<h3><b> (5) Descriptive Analysis </b></h3> <br>
+<img src="/assets/images/Screenshot (68).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (69).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (70).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (71).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (72).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (73).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (74).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (75).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (77).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (78).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (79).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (80).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (81).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (82).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (83).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (84).png"><br>
+<br>
+<br>
+<img src="/assets/images/Screenshot (85).png"><br>
+
+<h3><b> Briefly describe the dataset</b> <br>
+<h3>The data considered for the analysis is Storm Events data for the year 2020. The data consists of 61237 rows and 51 columns. But for this particular analysis, only information about the states in the US that got affected by different storm types, the direct and indirect deaths, and injuries are chosen.<br></h3>
+<h3><b> Prepare and describe relevant metadata (types of attributes/variables in the dataset)</b> <br></h3>
+<h3>The columns and the different data types are given below:<br></h3>
+<h3>STATE:  Nominal<br></h3>
+<h3>MONTH_NAME: Ordinal<br></h3>
+<h3>INJURIES_INDIRECT and INJURIES_DIRECT: Numeric<br></h3>
+<h3>DEATHS_DIRECT and DEATHS_INDIRECT: Ratio.<br></h3>
+<h3>'TOR_F_SCALE', 'TOR_LENGTH' and ‘TOR_WIDTH': Ratio.<br></h3>
+<h3><b> (7) Limitations</b> <br></h3>
+<h3><b> Discuss the limitations of your analysis</b> <br> </h3>
+<h3>The analysis is restricted to the particular year 2020 and it is limited to estimating the tornado impact on deaths and injuries of the people. <br></h3>
+<h3><b> Provide the future work that can improve your analysis to answer your question(s).</b> <br></h3>
+<h3>The future work that can add more efficiency to this analysis is that the data can be considered from 1980 to 2021 and can be analyzed for all those years and the further more the property and the crop damage can also be analyzed.<br></h3>
+<h3><b> (8) References:</b><br></h3>
+<h3>https://www.ncdc.noaa.gov/stormevents/<br></h3>
+
+<h3>https://www.ncdc.noaa.gov/stormevents/faq.jsp<br></h3>
+
+<h3>https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/<br></h3>
+
+<h3>https://medium.com/@szabo.bibor/how-to-create-a-seaborn-correlation-heatmap-in-python-834c0686b88e<br></h3>
+
+<h3>https://www.geeksforgeeks.org/countplot-using-seaborn-in-python/<br></h3>
+
+<h3>https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/<br></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </p>
+          </body>
+          <!-- <a class="page-link" href="/">Home</a>          
+          {%- for path in default_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%} -->
+        </div>
+
+      </nav>
+    {%- endif -%}    
+  </div>
+</header>
