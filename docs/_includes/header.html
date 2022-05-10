@@ -70,37 +70,52 @@
 <h3>•	Many empty columns<br></h3> 
 <h3>•	A lot of missing values<br></h3>
 <style >h3{text-align:left;}</style>
-<h3><b> (5) Descriptive Analysis </b></h3> <br>
+<h3><b> (5) Descriptive Analysis </b></h3>
+<h3><b><p style="line-height:1.4">Briefly describe the dataset</b></h3></p>
+<h3><p style="line-height:1.4">The data considered for the analysis is Storm Events data for the year 2020. The data consists of 61237 rows and 51 columns. But for this particular analysis, only information about the states in the US that got affected by different storm types, the direct and indirect deaths, and injuries are chosen.</h3></p>
+<h3><b><p style="line-height:1.4">Prepare and describe relevant metadata (types of attributes/variables in the dataset)
+  The columns and the different data types are given below:
+  </b></h3></p>
+  <h3><p style="line-height:1.4">STATE:  Nominal<br>
+    MONTH_NAME: Ordinal<br> 
+    INJURIES_INDIRECT and INJURIES_DIRECT: Numeric<br>
+    DEATHS_DIRECT and DEATHS_INDIRECT: Ratio.<br>
+    'TOR_F_SCALE', 'TOR_LENGTH' and ‘TOR_WIDTH': Ratio.
+    </h3></p>
 <img src="/assets/images/Screenshot (68).png"><br>
 <br>
+<h3><p style="line-height:1.4">Frequency count for Event Types</p></h3>
 <br>
-<img src="/assets/images/Screenshot (69).png"><br>
+<img src="/assets/images/Screenshot (69).png">
 <br>
+<h3><p style="line-height:1.4">Question1: Which event type has the most occurrences?</p></h3>
+<h3><p style="line-height:1.4">Visualizing the frequencies</p></h3>
 <br>
 <img src="/assets/images/Screenshot (70).png"><br>
 <br>
+<h3><p style="line-height:1.4">Checking for Missing Values</p></h3>
 <br>
 <img src="/assets/images/Screenshot (71).png"><br>
 <br>
+<h3><p style="line-height:1.4">Replacing the missing values with zero</p></h3>
 <br>
 <img src="/assets/images/Screenshot (72).png"><br>
 <br>
-<br>
+<h3><p style="line-height:1.4">Question 2: Which month has recorded the most injuries?</p></h3>
 <img src="/assets/images/Screenshot (73).png"><br>
-<br>
 <br>
 <img src="/assets/images/Screenshot (74).png"><br>
 <br>
-<br>
+<h3><p style="line-height:1.4">Question 3: Which month has recorded the most deaths?</p></h3>
 <img src="/assets/images/Screenshot (75).png"><br>
 <br>
-<br>
+<h3><p style="line-height:1.4">Visualizing the corrplot</p></h3>
 <img src="/assets/images/Screenshot (77).png"><br>
 <br>
-<br>
+<h3><p style="line-height:1.4">Question 4: What is the number of tornados in every state?</p></h3>
 <img src="/assets/images/Screenshot (78).png"><br>
 <br>
-<br>
+<h3><p style="line-height:1.4">Question 5: What is the impact of a tornado i.e. on deaths and injuries on different scales?</p></h3>
 <img src="/assets/images/Screenshot (79).png"><br>
 <br>
 <br>
@@ -109,7 +124,7 @@
 <br>
 <img src="/assets/images/Screenshot (81).png"><br>
 <br>
-<br>
+<h3><p style="line-height:1.4">Question 6: What is the number of injuries for different tornado scales occurring for different months.</p></h3>
 <img src="/assets/images/Screenshot (82).png"><br>
 <br>
 <br>
@@ -120,33 +135,20 @@
 <br>
 <br>
 <img src="/assets/images/Screenshot (85).png"><br>
-
-<h3><b> Briefly describe the dataset</b> <br>
-<h3>The data considered for the analysis is Storm Events data for the year 2020. The data consists of 61237 rows and 51 columns. But for this particular analysis, only information about the states in the US that got affected by different storm types, the direct and indirect deaths, and injuries are chosen.<br></h3>
-<h3><b> Prepare and describe relevant metadata (types of attributes/variables in the dataset)</b> <br></h3>
-<h3>The columns and the different data types are given below:<br></h3>
-<h3>STATE:  Nominal<br></h3>
-<h3>MONTH_NAME: Ordinal<br></h3>
-<h3>INJURIES_INDIRECT and INJURIES_DIRECT: Numeric<br></h3>
-<h3>DEATHS_DIRECT and DEATHS_INDIRECT: Ratio.<br></h3>
-<h3>'TOR_F_SCALE', 'TOR_LENGTH' and ‘TOR_WIDTH': Ratio.<br></h3>
+<br>
 <h3><b> (7) Limitations</b> <br></h3>
 <h3><b> Discuss the limitations of your analysis</b> <br> </h3>
 <h3>The analysis is restricted to the particular year 2020 and it is limited to estimating the tornado impact on deaths and injuries of the people. <br></h3>
 <h3><b> Provide the future work that can improve your analysis to answer your question(s).</b> <br></h3>
 <h3>The future work that can add more efficiency to this analysis is that the data can be considered from 1980 to 2021 and can be analyzed for all those years and the further more the property and the crop damage can also be analyzed.<br></h3>
 <h3><b> (8) References:</b><br></h3>
-<h3>https://www.ncdc.noaa.gov/stormevents/<br></h3>
+<h3><p style="line-height:1.4">https://www.ncdc.noaa.gov/stormevents/</h3></p>
+<h3><p style="line-height:1.4">https://www.ncdc.noaa.gov/stormevents/faq.jsp</h3></p>
+  <h3><p style="line-height:1.4">https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/</h3></p>
+    <h3><p style="line-height:1.4">https://medium.com/@szabo.bibor/how-to-create-a-seaborn-correlation-heatmap-in-python-834c0686b88e</h3></p>
+      <h3><p style="line-height:1.4">https://www.geeksforgeeks.org/countplot-using-seaborn-in-python/</h3></p>
+ <h3><p style="line-height:1.4">https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/</h3></p>
 
-<h3>https://www.ncdc.noaa.gov/stormevents/faq.jsp<br></h3>
-
-<h3>https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/<br></h3>
-
-<h3>https://medium.com/@szabo.bibor/how-to-create-a-seaborn-correlation-heatmap-in-python-834c0686b88e<br></h3>
-
-<h3>https://www.geeksforgeeks.org/countplot-using-seaborn-in-python/<br></h3>
-
-<h3>https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/<br></h3>
 
 
 
